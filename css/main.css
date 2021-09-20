@@ -1,0 +1,833 @@
+/*
+0 - 600px: Phone
+600 - 900px: Tablet portrait
+900 - 1200px: Tablet Landscape
+[1200 - 1800] is where our normal styles apply
+1800px + : Big desktop
+
+
+/*
+$breakpoint argument choices:
+--phone
+--tab-port
+--tab-land
+--big-desktop
+*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: "Raleway", sans-serif;
+  color: #333;
+  font-size: 98%;
+}
+@media (max-width: 37.5em) {
+  * {
+    font-size: 100%;
+  }
+}
+@media (max-width: 75em) {
+  * {
+    font-size: 97%;
+  }
+}
+@media (max-width: 56.25em) {
+  * {
+    font-size: 96%;
+  }
+}
+@media (min-wdith: 112.5em) {
+  * {
+    font-size: 100%;
+  }
+}
+* input::-webkit-outer-spin-button,
+* input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+* body {
+  box-sizing: border-box;
+  background: #fffefe;
+}
+* h1 {
+  font-size: 1.75rem;
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+* h2 {
+  letter-spacing: 3%;
+  font-size: 1.125rem;
+  line-height: 2.4375rem;
+  letter-spacing: -0.04em;
+}
+* h3 {
+  font-family: "Raleway", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 1rem;
+  line-height: 1.375rem;
+}
+* h4 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #13266a;
+  margin: 0;
+}
+* h5 {
+  font-size: 1.125rem;
+  line-height: 1.5rem;
+  font-weight: 700;
+  color: #13266a;
+}
+* p {
+  font-family: "Raleway", sans-serif;
+  line-height: 1.25rem;
+  color: #5a5959;
+}
+* li {
+  list-style-type: none;
+}
+* a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+* input {
+  border: none !important;
+  background-color: #fcf9f9;
+  padding: 0 0 0 1rem;
+  outline: none !important;
+  padding-bottom: 0.3125rem;
+  border-radius: 0.625rem;
+  margin-top: 0.1rem;
+  height: 3.75rem;
+  margin-bottom: 0.4rem;
+}
+* label {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #08112f;
+}
+* span {
+  height: 0.375rem;
+}
+* .btn-ct {
+  width: 80%;
+  min-height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+* .btn {
+  padding: 0.625rem 0;
+  width: 100%;
+  background-color: #f5733f;
+  color: white;
+  text-align: center;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+* .btn:hover {
+  background-color: #FDA31C;
+}
+
+textarea {
+  resize: none;
+  border-radius: 3.125rem;
+  padding-left: 1.6rem;
+  padding-top: 1rem;
+  border: none;
+  background-color: #fcf9f9;
+}
+
+svg {
+  cursor: pointer;
+}
+
+.container {
+  min-height: 100vh;
+}
+
+.cardshadow {
+  box-shadow: 13px 15px 44px rgba(0, 0, 0, 0.03);
+  border-radius: 1.25rem;
+}
+
+.display--active {
+  display: none !important;
+}
+
+@keyframes slidefrombottom {
+  0% {
+    transform: translateY(rem(15));
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+.cardShadow {
+  background: #FFFFFF;
+  box-shadow: 13px 15px 44px rgba(0, 0, 0, 0.03);
+}
+
+.maiiincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid red;
+}
+.maiiincontainer img {
+  width: 20%;
+}
+
+.loginformct {
+  min-height: 30%;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 5%;
+}
+
+.inputct {
+  height: 25%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.inputct input {
+  height: 3.5rem;
+}
+
+.button-ct {
+  height: 22%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.button-ct button {
+  width: 100%;
+  height: 60%;
+  border: none;
+  background-color: rgba(253, 28, 65, 0.85);
+  border-radius: 0.625rem;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0.375rem, 0.6875rem, 0.3125rem rgba(253, 28, 65, 0.2);
+}
+
+.ppcardgrid {
+  display: flex;
+  width: 90%;
+  height: 20%;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas: "one two" "one three";
+  margin: 0.4rem;
+  border-bottom: 0.125rem solid #494b5028;
+  justify-content: center;
+  align-items: center;
+}
+.ppcardgrid div {
+  border: 1px solid red;
+}
+.ppcardgrid .one {
+  grid-area: onez;
+  background: none;
+  background-image: none;
+}
+.ppcardgrid .two {
+  grid-area: twoz;
+  background: none;
+  background-image: none !important;
+}
+.ppcardgrid .three {
+  grid-area: threez;
+  background-image: none;
+}
+
+.calendar-time-ct {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+.calendar-time-ct p span {
+  font-weight: 600;
+}
+.calendar-time-ct img {
+  width: 70%;
+}
+
+.logo--ct {
+  height: 7%;
+  display: flex;
+  align-items: center;
+}
+
+.imageicon--ct {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0.5rem;
+}
+.imageicon--ct .dropdown {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.imageicon--ct .dropdown .dropdownitem {
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  transition: All 0.5s ease-in;
+}
+.imageicon--ct .dropdown .dropdownitem a {
+  padding: 1rem;
+}
+.imageicon--ct .dropdown .dropdownitem a:hover {
+  font-weight: 400;
+}
+
+.navlinks-ct {
+  height: 63%;
+}
+.navlinks-ct .navLinkitem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 3.75rem;
+  border-bottom: 0.1875rem solid #f1f1f1;
+}
+.navlinks-ct .navLinkitem:last-child {
+  border-bottom: none;
+}
+
+.active {
+  font-weight: 700;
+}
+
+.Accountbalance-ct {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  padding: 0 4%;
+}
+.Accountbalance-ct .balanceheading {
+  height: 10%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding-bottom: 1%;
+  border-bottom: 0.25rem solid #f1f1f1;
+}
+.Accountbalance-ct .balanceheading p {
+  font-size: 1rem;
+}
+.Accountbalance-ct .balanceheading .accbal {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+.Accountbalance-ct .balances {
+  height: 90%;
+}
+
+.cardItem {
+  height: 30%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "one two" "one three";
+}
+.cardItem .image {
+  grid-area: one;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardItem .image img {
+  width: 40%;
+}
+.cardItem .currentamount {
+  grid-area: two;
+  border-bottom: 0.1875rem solid #f1f1f1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 4%;
+}
+.cardItem .currentamount h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  color: #fd1c41;
+}
+.cardItem .tbp {
+  color: #FDA31C;
+}
+.cardItem .textitem {
+  grid-area: three;
+  padding-left: 4%;
+  padding-top: 2%;
+}
+.cardItem .textitem p {
+  font-family: "Raleway", sans-serif;
+  color: #5a5959;
+}
+.cardItem .textitem p span {
+  color: #FDA31C;
+}
+
+.darkyellow {
+  color: #644F2F !important;
+}
+
+.darkviolet {
+  color: #470652 !important;
+}
+
+.yellow {
+  color: #FDA31C !important;
+}
+
+.form-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.form-container .formheading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40%;
+}
+.form-container .loginformct {
+  width: 40%;
+}
+
+.loginmainct {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginmainct .loginCt {
+  width: 35%;
+  height: 50%;
+}
+.loginmainct .loginCt .logintop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6%;
+}
+.loginmainct .loginCt .logintop img {
+  width: 15%;
+}
+.loginmainct .loginCt .logintop .signin-redirect {
+  width: 31%;
+}
+.loginmainct .loginCt .logintop .signin-redirect p span {
+  color: #fd1c41;
+  font-weight: 700;
+}
+
+.auth-buttons {
+  height: 3.125rem;
+}
+.auth-buttons button {
+  width: 100%;
+  height: 100%;
+  background-color: #fd1c41;
+  color: white;
+  border: none;
+  border-radius: 0.625rem;
+}
+
+.otherstuff {
+  display: flex;
+  width: 100%;
+}
+.otherstuff .imagect {
+  width: 58%;
+  background-image: url("/assets//monalisa.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin-right: 0.5rem;
+  border-radius: 0.625rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  padding-right: 1rem;
+}
+.otherstuff .imagect h3 {
+  color: white;
+}
+.otherstuff .info-text {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+}
+.otherstuff .infohead {
+  height: 15%;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 0.4rem;
+  justify-content: center;
+  border-bottom: 0.1875rem solid #f1f1f1;
+}
+.otherstuff .item-dets p span {
+  font-weight: 700;
+  padding: 0.5rem 0;
+  color: #FDA31C;
+}
+
+.additempopup {
+  background-color: rgba(245, 245, 245, 0.938);
+  position: absolute;
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.additempopup .additemct {
+  width: 45%;
+  height: 90%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+}
+.additempopup .additemct .additem-top {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  height: 7%;
+  padding-right: 2%;
+}
+.additempopup .additemct .additem-top img {
+  width: 2%;
+  cursor: pointer;
+}
+.additempopup .additemct .additemform {
+  display: flex;
+  flex-direction: column;
+  height: 90%;
+}
+.additempopup .additemct .additemform .formheading {
+  height: 5%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.additempopup .additemct .additemform .formheading h1 {
+  font-weight: 700;
+}
+.additempopup .additemct .additemform .forminputct {
+  height: 80%;
+}
+.additempopup .additemct .additemform .frmbtns {
+  display: flex;
+  justify-content: space-between;
+  padding: 0% 5%;
+  width: 100%;
+}
+.additempopup .additemct .additemform .frmbtns button {
+  width: 48%;
+  cursor: pointer;
+}
+.additempopup .additemct .additemform .frmbtns button {
+  background-color: #bebebe;
+  cursor: pointer;
+}
+.additempopup .additemct .additemform .frmbtns button:last-child {
+  background-color: #fd1c41;
+  cursor: pointer;
+}
+.additempopup .additemct .additemform .frmbtns input[type=submit] {
+  height: 3rem;
+  width: 48%;
+  background-color: #fd1c41;
+  color: white;
+}
+.additempopup .additemct .additemform .frmbtns input[type=file] {
+  background: none;
+}
+
+.homepagect {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepagect .grid-ct {
+  display: grid;
+  width: 95%;
+  height: 95%;
+  grid-template-columns: 75% 20%;
+  grid-template-rows: 10% 65% 12%;
+  grid-template-areas: "one one" "two three" "four three";
+  row-gap: 5%;
+  column-gap: 2%;
+}
+.homepagect .grid-ct .one {
+  grid-area: one;
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+}
+.homepagect .grid-ct .one div {
+  align-items: center;
+  display: flex;
+}
+.homepagect .grid-ct .one .navlinks-ct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.homepagect .grid-ct .one .navlinks-ct a {
+  padding: 0 1rem;
+}
+.homepagect .grid-ct .one .loginbt-ct {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10%;
+}
+.homepagect .grid-ct .one .loginbt-ct button {
+  height: 2rem;
+  width: 50%;
+  background-color: #fd1c41;
+  border: none;
+  border-radius: 10px;
+  color: white !important;
+}
+.homepagect .grid-ct .one .loginbt-ct button a {
+  color: white;
+  font-weight: 600;
+}
+.homepagect .grid-ct .two {
+  grid-area: two;
+  background-image: url("/assets/ferrari.svg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  padding: 5% 5%;
+}
+.homepagect .grid-ct .two .item {
+  padding: 0.1rem 0;
+}
+.homepagect .grid-ct .two .item .modelname {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+}
+.homepagect .grid-ct .two .model button {
+  background: none;
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+  border: 2px solid #fd1c41;
+}
+.homepagect .grid-ct .three {
+  grid-area: three;
+}
+.homepagect .grid-ct .three .bid--heading {
+  height: 15%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+.homepagect .grid-ct .three .bid--heading h1 {
+  font-weight: 700;
+  border-bottom: 1px solid #aaa7a7;
+  padding-bottom: 0.5rem;
+}
+.homepagect .grid-ct .three .bid--content {
+  height: 70%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.homepagect .grid-ct .three .bid--footer {
+  height: 15%;
+  padding: 0 5%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.homepagect .grid-ct .three .bid--footer .button-ct {
+  height: 100%;
+}
+.homepagect .grid-ct .three .bid--footer button {
+  height: 2rem;
+  width: 50%;
+  background-color: #fd1c41;
+  border: none;
+  border-radius: 10px;
+  color: white !important;
+}
+.homepagect .grid-ct .three .bid--footer button a {
+  color: white;
+  font-weight: 600;
+}
+.homepagect .grid-ct .four {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+.homepagect .grid-ct .four .specs-ct {
+  display: grid;
+  grid-template-columns: 25% 2% 23% 2% 25% 0%;
+  justify-content: center;
+  width: 90%;
+  height: 100%;
+}
+.homepagect .grid-ct .four .specs-ct .hrct {
+  display: flex;
+  justify-content: center;
+}
+.homepagect .grid-ct .four .specs-ct .hrct hr {
+  border: 1px solid rgba(170, 167, 167, 0.301);
+  height: 90%;
+}
+.homepagect .grid-ct .four .specs-ct .specinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.homepagect .grid-ct .four .specs-ct .specinfo p {
+  text-align: center;
+}
+
+.dashboard--ct {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% 80%;
+  grid-template-rows: 5% 93%;
+  grid-template-areas: "side top" "side dcontent";
+  gap: 1%;
+}
+.dashboard--ct .Dashboardtopnav {
+  grid-area: top;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+}
+.dashboard--ct .Dashboardsidenav {
+  grid-area: side;
+  padding: 0 10%;
+}
+.dashboard--ct .Dashboardcontent {
+  grid-area: dcontent;
+  display: flex;
+  flex-direction: column;
+  row-gap: 5%;
+}
+.dashboard--ct .Dashboardcontent .accountbalance_stats {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+.dashboard--ct .Dashboardcontent .Accountbalance-ct {
+  width: 40%;
+}
+.dashboard--ct .Dashboardcontent .itemsdashboard {
+  width: 70% !important;
+  background-image: url("/assets/ferrari.svg");
+  background-size: cover;
+}
+.dashboard--ct .Dashboardcontent .itemsdashboard .item {
+  padding: 0.1rem 0;
+}
+.dashboard--ct .Dashboardcontent .itemsdashboard .item .modelname {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.4rem;
+}
+.dashboard--ct .Dashboardcontent .model button {
+  background: none;
+  padding: 0.5rem;
+  border-radius: 1.25rem;
+  border: 2px solid #fd1c41;
+}
+.dashboard--ct .Dashboardcontent .Acountstatistics {
+  width: 60%;
+}
+.dashboard--ct .Dashboardcontent .bidleaderboard {
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 1.25rem;
+}
+.dashboard--ct .Dashboardcontent .bidleaderboard .leaderboard {
+  height: 70%;
+  border-radius: 1.25rem;
+}
+.dashboard--ct .Dashboardcontent .bidleaderboard .leaderboard .bid--heading {
+  border-bottom: 0.25rem solid #f1f1f1;
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.dashboard--ct .Dashboardcontent .bidleaderboard .biddingform {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 0 5%;
+}
+.dashboard--ct .Dashboardcontent .Usersother {
+  height: 50%;
+  display: flex;
+  flex-direction: row;
+  gap: 2%;
+}
+.dashboard--ct .Dashboardcontent .Usersother .Products_users {
+  width: 40%;
+}
+.dashboard--ct .Dashboardcontent .Usersother .otherstuff {
+  width: 60%;
+}
+
+.loginmainct {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.loginmainct .loginCt {
+  width: 35%;
+  height: 50%;
+}
+.loginmainct .loginCt .logintop {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 6%;
+}
+.loginmainct .loginCt .logintop img {
+  width: 15%;
+}
+.loginmainct .loginCt .logintop .signin-redirect {
+  width: 31%;
+}
+.loginmainct .loginCt .logintop .signin-redirect p span {
+  color: #fd1c41;
+  font-weight: 700;
+}
+
+/*# sourceMappingURL=main.css.map */

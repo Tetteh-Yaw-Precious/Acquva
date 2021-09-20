@@ -1,0 +1,51 @@
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.logo--ct {
+  height: 7%;
+  display: flex;
+  align-items: center;
+}
+.imageicon--ct {
+  height: 30%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: .5rem;
+  .dropdown{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    .dropdownitem{
+      height: 2rem;
+      display: flex;
+      align-items: center;
+      transition: All .5s ease-in;
+      a{
+        padding: 1rem;
+        &:hover{
+        font-weight: 400;
+        }
+      }
+        }
+  }
+}
+.navlinks-ct {
+  height: 63%;
+  .navLinkitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: rem(60);
+    border-bottom: rem(3) solid $border;
+  }
+  .navLinkitem:last-child {
+    border-bottom: none;
+  }
+}
+.active {
+  font-weight: 700;
+}

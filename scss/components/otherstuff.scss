@@ -1,0 +1,48 @@
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.otherstuff{
+    display: flex;
+    width: 100%;
+    .imagect{
+        width: 58%;
+        background-image: url("/assets//monalisa.svg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: .5rem;
+        border-radius: rem(10);
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        padding-right: 1rem;
+        h3{
+            color: white;
+        }
+    }
+    .info-text{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+    }
+    .infohead{
+        height: 15%;
+        display: flex;
+        align-items: flex-end;
+        margin-bottom: .4rem;
+        justify-content: center;
+        border-bottom: rem(3) solid $border;
+
+    }
+    .item-dets{
+        p{
+            span{
+                font-weight: 700;
+                padding: .5rem 0;
+                color: $primary-orange;
+            }
+        }
+    }
+}

@@ -1,0 +1,15 @@
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+.auth-buttons{
+    height: rem(50);
+    button{
+        width: 100%;
+        height: 100%;
+        background-color: $primaryColor;
+        color: white;
+        border: none;
+        border-radius: rem(10);
+    }
+}

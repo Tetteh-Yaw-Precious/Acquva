@@ -1,0 +1,21 @@
+
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+.button-ct{
+    height: 22%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    button{
+        width: 100%;
+        height: 60%;
+        border: none;
+        background-color: $glassPrimary;
+        border-radius: rem(10);
+        color: white;
+        font-weight: 600;
+        box-shadow: $glassShadow;
+    }
+}

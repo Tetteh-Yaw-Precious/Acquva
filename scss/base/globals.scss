@@ -1,0 +1,142 @@
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+  font-family: $primaryFont;
+  color: #333;
+  //defines what 1 rem is
+  font-size: 98%;
+  @include respond(phone) {
+    font-size: 100%;
+  } //600
+  @include respond(tab-land) {
+    font-size: 97%;
+  } //900
+  @include respond(tab-port) {
+    font-size: 96%;
+  } //1200
+  @include respond(big-desktop) {
+    font-size: 100%;
+  }
+  input::-webkit-outer-spin-button,
+  input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  body {
+    box-sizing: border-box;
+    background: #fffefe;
+  }
+  h1 {
+    font-size: 1.75rem;
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 600;
+  }
+
+  h2 {
+    letter-spacing: 3%;
+    font-size: 1.125rem;
+    line-height: 2.4375rem;
+    letter-spacing: -0.04em;
+  }
+
+  h3 {
+    font-family: $primaryFont;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.375rem;
+  }
+  h4 {
+    font-size: rem(24);
+    font-weight: 700;
+    color: $blue;
+    margin: 0;
+  }
+  h5 {
+    font-size: rem(18);
+    line-height: rem(24);
+    font-weight: 700;
+    color: $blue;
+  }
+
+  p {
+    font-family: $primaryFont;
+    line-height: rem(20);
+    color: $p-color;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    font-size: $primaryFontSize;
+    text-decoration: none;
+  }
+
+  input {
+    border: none !important;
+    background-color: $inputColor;
+    padding: 0 0 0 1rem;
+    outline: none !important;
+    padding-bottom: rem(5);
+    border-radius: rem(10);
+    margin-top: 0.1rem;
+    height: rem(60);
+    margin-bottom: 0.4rem;
+  }
+  label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: $dark;
+  }
+  span {
+    height: rem(6);
+  }
+  .btn-ct {
+    width: 80%;
+    min-height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btn {
+    padding: rem(10) 0;
+    width: 100%;
+    background-color: $secondary;
+    color: white;
+    text-align: center;
+    font-size: rem(18);
+    font-weight: 700;
+  }
+  .btn:hover {
+    background-color: $primary-orange;
+  }
+}
+textarea {
+  resize: none;
+  border-radius: 3.125rem;
+  padding-left: 1.6rem;
+  padding-top: 1rem;
+  border: none;
+  background-color: $inputColor;
+}
+svg {
+  cursor: pointer;
+}
+.container {
+  min-height: 100vh;
+}
+.cardshadow {
+  box-shadow: 13px 15px 44px rgba(0, 0, 0, 0.03);
+  border-radius: rem(20);
+}
+.display--active {
+  display: none !important;
+}

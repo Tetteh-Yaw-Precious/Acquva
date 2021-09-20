@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login | Acquva</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="form-ct">
+      <div class="form-container">
+        <div class="formheading">
+          <div class="logo">
+            <img src="/assets/Aquvalogo.svg" alt="aquavalogo" />
+          </div>
+          <div class="registerlink">
+            <p>
+              Don't have an account?
+              <a href="/html/signup.html">
+                <span>Sign up</span></a>
+
+              </NavLink>
+            </p>
+          </div>
+        </div>
+        <form class="loginformct cardshadow loginform">
+          <label htmlFor="name">Email</label>
+          <input
+            type="email"
+            name="Email"
+            placeholder="Enter your email"
+            class="emailfield" required
+          />
+          <label htmlFor="Password">Password</label>
+          <input
+            type="password"
+            name="Password"
+            class="passwordfield"
+            placeholder="Enter your password" required
+          />
+          <div class="auth-buttons">
+              <button name="login"  type="submit">
+                Log in
+              </button>
+          </div>
+          <div></div>
+        </form>
+      </div>
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-analytics.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+    <script src="/config/firebase.js"></script>
+    <script src="/app/signin.js"></script>
+  </body>
+</html>

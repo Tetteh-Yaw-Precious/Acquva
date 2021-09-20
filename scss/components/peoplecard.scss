@@ -1,0 +1,35 @@
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+.ppcardgrid {
+  display: flex;
+  width: 90%;
+  height: 20%;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 1fr 1fr;
+  grid-template-areas:
+    "one two"
+    "one three";
+  margin: 0.4rem;
+  border-bottom: rem(2) solid $ui-gray;
+  justify-content: center;
+  align-items: center;
+  div {
+    border: 1px solid red;
+  }
+  .one {
+    grid-area: onez;
+    background: none;
+    background-image: none;
+  }
+  .two {
+    grid-area: twoz;
+    background: none;
+    background-image: none !important;
+  }
+  .three {
+    grid-area: threez;
+    background-image: none;
+  }
+}

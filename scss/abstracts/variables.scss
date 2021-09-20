@@ -1,0 +1,32 @@
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+//Colors
+//fonts
+$primaryFont: "Raleway", sans-serif;
+$secondaryFont: "Montserrat", sans-serif;
+$p-color: #5a5959;
+$primaryColor: #fd1c41;
+$primaryTextColor: #4f4f4f;
+$headingColor: #020201;
+$inputColor: #fcf9f9;
+$glassPrimary: rgba(253, 28, 65, 0.85);
+$glassShadow: rem(6), rem(11), rem(5) rgba(253, 28, 65, 0.2);
+$yellowDark: #644F2F;
+$darkviolet: #470652;
+//subcolors
+$border: #f1f1f1;
+$logInHeight: 2.6875rem;
+$borderRadius: 6.25rem;
+
+//from bootstrap
+$dark: #08112f;
+$danger: #f41010;
+$success: #0fb60c;
+$secondary: #f5733f;
+$blue: #13266a;
+$bg-light: #f6f8fa;
+$bg-primary: #13266a;
+$primary-orange: #FDA31C;
+$ui-gray: #494b5028;

@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin | Acquva</title>
+    <link rel="stylesheet" href="/css/main.css" />
+  </head>
+  <body>
+    <div class="dashboard--ct">
+      <div class="Dashboardtopnav">
+        <div class="calendar-time-ct">
+          <div class="calendarct">
+            <img src="/assets/calendar.svg" alt="calendar-icon" />
+          </div>
+          <div class="date--ct">
+            <p><span>Today,</span> September,14</p>
+          </div>
+        </div>
+      </div>
+      <div class="Dashboardsidenav cardShadow">
+        <div class="logo--ct">
+          <img src="/assets/Aquvalogo.svg" alt="Aquvalogo" />
+        </div>
+        <div class="imageicon--ct">
+          <admin-img>
+            <img src="/assets/Qwasiimage.svg" alt="admin" />
+            <div class="dropdown">
+              <a href="#"
+                >Admin
+                <img
+                  src="/assets/dropdownarrow.svg"
+                  alt="nameofuser"
+                  id="dropdownarrow"
+              /></a>
+              <div class="dropdownitem" id="dropdownitem-js">
+                <a href="#" class="signout display--active">signout</a>
+              </div>
+            </div>
+          </admin-img>
+        </div>
+        <div class="navlinks-ct">
+          <a href="" class="navLinkitem">Home</a>
+          <a href="" class="navLinkitem">Items Posted</a>
+          <a href="" class="navLinkitem">Open Bids</a>
+          <a href="" class="navLinkitem">Items Posted</a>
+          <a href="" class="navLinkitem">Closed Bids</a>
+          <a href="" class="navLinkitem" id="additem-js">Add Item</a>
+        </div>
+      </div>
+      <div class="Dashboardcontent">
+        <div class="accountbalance_stats">
+          <div class="Accountbalance-ct cardshadow">
+            <div class="balanceheading">
+              <p class="accbal">Account balance</p>
+              <p>Trending item</p>
+            </div>
+            <div class="balances">
+              <div class="cardItem">
+                <div class="image">
+                  <img src="/assets/piggybank.svg" alt="imageitem" />
+                </div>
+                <div class="currentamount">
+                  <h1 class="piggybank">GHc 302,0000</h1>
+                </div>
+                <div class="textitem">
+                  <p>Bank Account Balance</p>
+                </div>
+              </div>
+              <div class="cardItem">
+                <div class="image">
+                  <img src="/assets/topbidicon.svg" alt="imageitem" />
+                </div>
+                <div class="currentamount">
+                  <h1 class="topbidicon darkyellow">GHc 1,00000</h1>
+                </div>
+                <div class="textitem">
+                  <p>Top Bid price <span>(current bid)</span></p>
+                </div>
+              </div>
+              <div class="cardItem">
+                <div class="image">
+                  <img src="/assets/producticon.svg" alt="imageitem" />
+                </div>
+                <div class="currentamount">
+                  <h1 class="darkviolet">Ferrari Rosa (car)</h1>
+                </div>
+                <div class="textitem">
+                  <p>current Auction item</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="Acountstatistics cardshadow"></div>
+        </div>
+        <div class="Usersother">
+          <div class="Products_users Accountbalance-ct cardshadow">
+            <div class="cardItem">
+              <div class="image">
+                <img src="/assets/peopeicon.svg" alt="imageitem" />
+              </div>
+              <div class="currentamount">
+                <h1 class="poepelicon" id="usercount">12 Users</h1>
+              </div>
+              <div class="textitem">
+                <p>Number of Users</p>
+              </div>
+            </div>
+            <div class="cardItem">
+              <div class="image">
+                <img src="/assets/totalnumbproducts.svg" alt="imageitem" />
+              </div>
+              <div class="currentamount">
+                <h1 class="yellow" id="productscount-js">10 Products</h1>
+              </div>
+              <div class="textitem">
+                <p>Number of Products</p>
+              </div>
+            </div>
+        </div>
+        <div class="otherstuff cardshadow">
+           <div class="imagect">
+               <h3>Next item up for auction</h3>
+           </div>     
+           <div class="info-text">
+               <div class="infohead">
+                   <h5>Monalisa</h5>
+               </div>
+               <div class="infobody">
+                   <p>
+                    Mona Lisa, also called Portrait of Lisa Gherardini,
+                    wife of Francesco del Giocondo, Italian La Gioconda, or French La Joconde,
+                     oil painting on a poplar wood panel by Leonardo da Vinci, probably the world’s most famous painting.
+                      It was painted sometime between 1503 and 1519, when Leonardo was living in Florence.
+                   </p>
+               </div>
+               <div class="item-dets">
+                <p><span>Worth:</span>1957 Ferrari 250 Testa Rossa</p>
+                <p><span>Prev.Owner:</span>King Francis |</p>
+               </div>
+           </div>
+        </div>
+      </div>
+    </div>
+    <!--Additem popup-->
+    <div class="additempopup display--active" id="additempopup-js">
+      <div class="additemct cardshadow">
+        <div class="additem-top">
+          <img src="/assets/close.svg" alt="" id="close-additempop-icon-js">
+        </div>
+        <form  class="additemform" id="additemform-js">
+          <div class="formheading">
+            <h1>Add Item</h1>
+          </div>
+          <div class="forminputct loginformct">
+        <label htmlFor="Enter Item name">Enter Item Name</label>
+        <input type="text" name="Item name" placeholder="Enter Item name"id="itemname-js" required/>
+        <label htmlFor="ItemWorth">Enter Item Worth</label>
+        <input type="text" name="Item worth" placeholder="Enter Item Worth"id="itemworth-js" required/>
+        <label htmlFor="iteminfo">Enter Item Info</label>
+        <input type="text" name="iteminfo" placeholder="Enter Item Info" id="iteminfo-js" required/>
+        <label htmlFor="productionyrbegin">production year begin</label>
+        <input type="month" name="productionyrbegin" placeholder="Enter Production year begin"  id="prodyrbegin-js"required/>
+        <label htmlFor="productionyrend">production year end</label>
+        <input type="month" name="productionyrend" placeholder="Enter Production year end" id="prodyrend-js" required/>
+        <label htmlFor="auctiontime">Auction time</label>
+        <input type="datetime-local" name="productionyrend" placeholder="Auction time" id="Auctiontimeend" required/>
+          </div>
+          <div class="frmbtns auth-buttons">
+            <input name="additem" type="file" accept="image/*" id="imageupload-js" required/>
+            <input name="postitem" type="submit"/>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <div class="additempopup display--active  itemsposted-js">
+
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+    <script src="/App/index.js"></script>
+    <script src="/config/firebase.js"></script>
+    <script src="/App/Admindashboard.js"></script>
+  </body>
+</html>

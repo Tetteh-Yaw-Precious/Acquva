@@ -1,0 +1,15 @@
+.cardShadow {
+  background: #FFFFFF;
+  box-shadow: 13px 15px 44px rgba(0, 0, 0, 0.03);
+}
+.maiiincontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid red;
+  img {
+    width: 20%;
+  }
+}

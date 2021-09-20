@@ -1,0 +1,51 @@
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.form-container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .formheading{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width:40%;
+    }
+    .loginformct{
+        width: 40%;
+    }
+}
+.loginmainct {
+  width: 70%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .loginCt {
+    width: 35%;
+    height: 50%;
+    .logintop {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 6%;
+      img {
+        width: 15%;
+      }
+      .signin-redirect {
+        width: 31%;
+        p {
+          span {
+            color: $primaryColor;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+}

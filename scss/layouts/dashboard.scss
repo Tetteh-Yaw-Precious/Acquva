@@ -1,0 +1,100 @@
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.dashboard--ct {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 15% 80%;
+  grid-template-rows: 5% 93%;
+  grid-template-areas:
+    "side top"
+    "side dcontent";
+  gap: 1%;
+  .Dashboardtopnav {
+    grid-area: top;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+  .Dashboardsidenav {
+    grid-area: side;
+    padding: 0 10%;
+  }
+  .Dashboardcontent {
+    grid-area: dcontent;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5%;
+    .accountbalance_stats {
+      height: 50%;
+      display: flex;
+      flex-direction: row;
+      gap: 2%;
+    }
+    .Accountbalance-ct {
+      width: 40%;
+    }
+    .itemsdashboard {
+      width: 70% !important;
+      background-image: url("/assets/ferrari.svg");
+      background-size: cover;
+      .item {
+        padding: 0.1rem 0;
+        .modelname {
+          font-family: $secondaryFont;
+          font-size: 1.4rem;
+        }
+      }
+    }
+    .model {
+      button {
+        background: none;
+        padding: 0.5rem;
+        border-radius: rem(20);
+        border: 2px solid $primaryColor;
+      }
+    }
+    .Acountstatistics {
+      width: 60%;
+    }
+    .bidleaderboard {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      border-radius: rem(20);
+
+      .leaderboard{
+        height: 70%;
+        border-radius: rem(20);
+        .bid--heading{
+          border-bottom: rem(4) solid $border;
+          height: 20%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+      .biddingform{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding: 0 5%;
+      }
+      
+    }
+    .Usersother {
+      height: 50%;
+      display: flex;
+      flex-direction: row;
+      gap: 2%;
+      .Products_users {
+        width: 40%;
+      }
+      .otherstuff {
+        width: 60%;
+      }
+    }
+  }
+}

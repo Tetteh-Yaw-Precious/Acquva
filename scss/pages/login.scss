@@ -1,0 +1,35 @@
+@use '../abstracts/variables.scss' as *;
+@use '../base/typography.scss' as *;
+@use '../abstracts/functions.scss' as *;
+@use '../abstracts/mixins.scss' as *;
+
+.loginmainct{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loginCt{
+        width: 35%;
+        height: 50%;
+        .logintop{
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 6%;
+            img{
+                width: 15%;
+            }
+            .signin-redirect{
+                width: 31%;
+                p{
+                    span{
+                        color: $primaryColor;
+                        font-weight: 700;
+                    }
+                }
+            }
+        }
+    }
+}

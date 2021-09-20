@@ -1,0 +1,14 @@
+.calendar-time-ct{
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    p{
+        span{
+            font-weight: 600;
+        }
+    }
+    img{
+        width: 70%;
+    }
+
+}
