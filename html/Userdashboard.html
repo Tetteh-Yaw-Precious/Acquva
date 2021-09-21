@@ -62,10 +62,6 @@
             <div class="bid--heading">
               <h1>Active Bids</h1>
             </div>
-            <!--the bids from firebase-->
-            <div>
-              <p>Hello</p>
-            </div>
           </div>
 
           <form class="biddingform" id="bidinputform" onsubmit="makepayment()">
@@ -138,8 +134,19 @@
   <script src="/App/Admindashboard.js"></script>
   <script src="/App/index.js"></script>
   <script>
+    //real time date
     const date = new Date();
+    //insert the date
     document.getElementById("date").innerHTML = date.toDateString();
+
+    //get firestore documents
+    db.collection("Auctions").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        const data = doc.data();
+        console.log(doc.id, " => ", doc.data());
+      });
+    });
+
     const bidinputform = document.getElementById("bidinputform");
     const makepayments = document.getElementById("makepayments");
     const auctionmoney = document.getElementById("auctionmoney-js");
