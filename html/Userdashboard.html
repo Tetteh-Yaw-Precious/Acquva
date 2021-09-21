@@ -1,173 +1,178 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Acquva | UserDashboard</title>
-    <link rel="stylesheet" href="/css/main.css" />
 
-  </head>
-  <body>
-    <div class="dashboard--ct">
-      <div class="Dashboardtopnav">
-        <div class="calendar-time-ct">
-          <div class="calendarct">
-            <img src="/assets/calendar.svg" alt="calendar-icon" />
-          </div>
-          <div class="date--ct">
-            <p><span>Today,</span> September,14</p>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Acquva | UserDashboard</title>
+  <link rel="stylesheet" href="/css/main.css" />
+
+</head>
+
+<body>
+  <div class="dashboard--ct">
+    <div class="Dashboardtopnav">
+      <div class="calendar-time-ct">
+        <div class="calendarct">
+          <img src="/assets/calendar.svg" alt="calendar-icon" />
         </div>
-      </div>
-      <div class="Dashboardsidenav cardShadow">
-        <div class="logo--ct">
-          <img src="/assets/Aquvalogo.svg" alt="Aquvalogo" />
+        <div class="date--ct">
+          <p>Today, <span id="date"></span> </p>
         </div>
-        <div class="imageicon--ct">
-            <admin-img>
-              <img src="/assets/Qwasiimage.svg" alt="admin" />
-              <div class="dropdown">
-                <a href="#"
-                  >User
-                  <img
-                    src="/assets/dropdownarrow.svg"
-                    alt="nameofuser"
-                    id="dropdownarrow"
-                /></a>
-                <div class="dropdownitem" id="dropdownitem-js">
-                  <a href="#" class="signout display--active">signout</a>
-                </div>
-              </div>
-            </admin-img>
-          </div>
-        <div class="navlinks-ct">
-          <a href="" class="navLinkitem">Home</a>
-          <a href="" class="navLinkitem">Bidded Items</a>
-          <a href="" class="navLinkitem">Open Bids</a>
-          <a href="" class="navLinkitem">Settled Bids</a>
-          <a href="" class="navLinkitem" id="additem-js">Collect Items</a>
-        </div>
-      </div>
-      <div class="Dashboardcontent">
-        <div class="accountbalance_stats">
-          <div class="Accountbalance-ct itemsdashboard cardshadow">
-            <div class="auctiontype item">Trending Auctions</div>
-            <div class="auction_item item">
-              <h1 class="modelname">1957 Ferrari 250 Testa Rossa</h1>
-            </div>
-            <div class="model item">
-              <button>Racing sports car</button>
-            </div>
-          </div>
-          <div class="Acountstatistics bidleaderboard cardshadow">
-            <div class="leaderboard">
-                <div class="bid--heading">
-                    <h1>Active Bids</h1>
-                  </div>
-            </div>
-            <form class="biddingform" id="bidinputform" onsubmit="makepayment()"> 
-                <script src="https://checkout.flutterwave.com/v3.js"></script>
-                <input type="number" name="auctionmoney" placeholder="Enter you Bid Amount" id="auctionmoney-js" required/>
-                <div class="auth-buttons">
-                    <button name="signup" type="submit" id="makepayments">Place Bid</button>
-                  </div>
-            </form>
-          </div>
-          </div>
-          <div class="Usersother">
-            <div class="Products_users Accountbalance-ct cardshadow">
-              <div class="cardItem">
-                <div class="image">
-                  <img src="/assets/peopeicon.svg" alt="imageitem" />
-                </div>
-                <div class="currentamount">
-                  <h1 class="darkyellow" id="usercount">0 Auctions so far</h1>
-                </div>
-                <div class="textitem">
-                  <p>participated Auctions</p>
-                </div>
-              </div>
-              <div class="cardItem">
-                <div class="image">
-                  <img src="/assets/totalnumbproducts.svg" alt="imageitem" />
-                </div>
-                <div class="currentamount">
-                  <h1 class="yellow" id="productscount-js">0 Items Collected</h1>
-                </div>
-                <div class="textitem">
-                  <p>Numbers of items collected</p>
-                </div>
-              </div>
-          </div>
-          <div class="otherstuff cardshadow">
-             <div class="imagect">
-                 <h3>Next item up for auction</h3>
-             </div>     
-             <div class="info-text">
-                 <div class="infohead">
-                     <h5>Monalisa</h5>
-                 </div>
-                 <div class="infobody">
-                     <p>
-                      Mona Lisa, also called Portrait of Lisa Gherardini,
-                      wife of Francesco del Giocondo, Italian La Gioconda, or French La Joconde,
-                       oil painting on a poplar wood panel by Leonardo da Vinci, probably the world’s most famous painting.
-                        It was painted sometime between 1503 and 1519, when Leonardo was living in Florence.
-                     </p>
-                 </div>
-                 <div class="item-dets">
-                  <p><span>Worth:</span>1957 Ferrari 250 Testa Rossa</p>
-                  <p><span>Prev.Owner:</span>King Francis |</p>
-                 </div>
-             </div>
-          </div>
-        </div>
-        </div>
-        
       </div>
     </div>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
-    <script src="/App/index.js"></script>
-    <script src="/config/firebase.js"></script>
-    <script src="/App/Admindashboard.js"></script>
-    <script src="/App/index.js"></script>
-    <script>
-        const bidinputform = document.getElementById("bidinputform");
-        const makepayments = document.getElementById("makepayments");
-        const auctionmoney = document.getElementById("auctionmoney-js");
-        console.log(auctionmoney)
+    <div class="Dashboardsidenav cardShadow">
+      <div class="logo--ct">
+        <img src="/assets/Aquvalogo.svg" alt="Aquvalogo" />
+      </div>
+      <div class="imageicon--ct">
+        <admin-img>
+          <img src="/assets/Qwasiimage.svg" alt="admin" />
+          <div class="dropdown">
+            <a href="#">User
+              <img src="/assets/dropdownarrow.svg" alt="nameofuser" id="dropdownarrow" /></a>
+            <div class="dropdownitem" id="dropdownitem-js">
+              <a href="#" class="signout display--active">signout</a>
+            </div>
+          </div>
+        </admin-img>
+      </div>
+      <div class="navlinks-ct">
+        <a href="" class="navLinkitem">Home</a>
+        <a href="" class="navLinkitem">Bidded Items</a>
+        <a href="" class="navLinkitem">Open Bids</a>
+        <a href="" class="navLinkitem">Settled Bids</a>
+        <a href="" class="navLinkitem" id="additem-js">Collect Items</a>
+      </div>
+    </div>
+    <div class="Dashboardcontent">
+      <div class="accountbalance_stats">
+        <div class="Accountbalance-ct itemsdashboard cardshadow">
+          <div class="auctiontype item">Trending Auctions</div>
+          <div class="auction_item item">
+            <h1 class="modelname">1957 Ferrari 250 Testa Rossa</h1>
+          </div>
+          <div class="model item">
+            <button>Racing sports car</button>
+          </div>
+        </div>
+        <div class="Acountstatistics bidleaderboard cardshadow">
+          <div class="leaderboard">
+            <div class="bid--heading">
+              <h1>Active Bids</h1>
+            </div>
+            <!--the bids from firebase-->
+            <div>
+              <p>Hello</p>
+            </div>
+          </div>
 
-        console.log(bidinputform)
-        const pkey = "FLWPUBK_TEST-feb2b069c8708a0cc88217c76f3f5179-X";
-        const makepayment = (e) =>{
-            e.preventDefault()
-            FlutterwaveCheckout({
-                public_key: pkey,
-                tx_ref: `asasd3232`,
-                amount: auctionmoney.value,
-                currency: "GHS",
-                country: "GH",
-                payment_options: "card,mobile_money_ghana",
-                customer: {
-                  email:"user@gmail.com",
-                  phone_number: `none`,
-                  name: `username`,
-                },
-                callback: function (data) {
-                },
-                onclose: function () {
-                },
-                customizations: {
-                  title: "Auction money",
-                  description: "Auction money",
-                },
-              });
-        }
-        bidinputform.addEventListener("submit", makepayment)
-    </script>
-  </body>
+          <form class="biddingform" id="bidinputform" onsubmit="makepayment()">
+            <script src="https://checkout.flutterwave.com/v3.js"></script>
+            <input type="number" name="auctionmoney" placeholder="Enter you Bid Amount" id="auctionmoney-js" required />
+            <div class="auth-buttons">
+              <button name="signup" type="submit" id="makepayments">Place Bid</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="Usersother">
+        <div class="Products_users Accountbalance-ct cardshadow">
+          <div class="cardItem">
+            <div class="image">
+              <img src="/assets/peopeicon.svg" alt="imageitem" />
+            </div>
+            <div class="currentamount">
+              <h1 class="darkyellow" id="usercount">0 Auctions so far</h1>
+            </div>
+            <div class="textitem">
+              <p>participated Auctions</p>
+            </div>
+          </div>
+          <div class="cardItem">
+            <div class="image">
+              <img src="/assets/totalnumbproducts.svg" alt="imageitem" />
+            </div>
+            <div class="currentamount">
+              <h1 class="yellow" id="productscount-js">0 Items Collected</h1>
+            </div>
+            <div class="textitem">
+              <p>Numbers of items collected</p>
+            </div>
+          </div>
+        </div>
+        <div class="otherstuff cardshadow">
+          <div class="imagect">
+            <h3>Next item up for auction</h3>
+          </div>
+          <div class="info-text">
+            <div class="infohead">
+              <h5>Monalisa</h5>
+            </div>
+            <div class="infobody">
+              <p>
+                Mona Lisa, also called Portrait of Lisa Gherardini,
+                wife of Francesco del Giocondo, Italian La Gioconda, or French La Joconde,
+                oil painting on a poplar wood panel by Leonardo da Vinci, probably the world’s most famous painting.
+                It was painted sometime between 1503 and 1519, when Leonardo was living in Florence.
+              </p>
+            </div>
+            <div class="item-dets">
+              <p><span>Worth:</span>1957 Ferrari 250 Testa Rossa</p>
+              <p><span>Prev.Owner:</span>King Francis |</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+  </div>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
+  <script src="/App/index.js"></script>
+  <script src="/config/firebase.js"></script>
+  <script src="/App/Admindashboard.js"></script>
+  <script src="/App/index.js"></script>
+  <script>
+    const date = new Date();
+    document.getElementById("date").innerHTML = date.toDateString();
+    const bidinputform = document.getElementById("bidinputform");
+    const makepayments = document.getElementById("makepayments");
+    const auctionmoney = document.getElementById("auctionmoney-js");
+    console.log(auctionmoney)
+
+    console.log(bidinputform)
+    const pkey = "FLWPUBK_TEST-feb2b069c8708a0cc88217c76f3f5179-X";
+    const makepayment = (e) => {
+      e.preventDefault()
+      FlutterwaveCheckout({
+        public_key: pkey,
+        tx_ref: `asasd3232`,
+        amount: auctionmoney.value,
+        currency: "GHS",
+        country: "GH",
+        payment_options: "card,mobile_money_ghana",
+        customer: {
+          email: "user@gmail.com",
+          phone_number: `none`,
+          name: `username`,
+        },
+        callback: function (data) {
+        },
+        onclose: function () {
+        },
+        customizations: {
+          title: "Auction money",
+          description: "Auction money",
+        },
+      });
+    }
+    bidinputform.addEventListener("submit", makepayment)
+  </script>
+</body>
+
 </html>
