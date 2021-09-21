@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin | Acquva</title>
     <link rel="stylesheet" href="/css/main.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.5.1/chart.min.js" integrity="sha512-Wt1bJGtlnMtGP0dqNFH1xlkLBNpEodaiQ8ZN5JLA5wpc1sUlk/O5uuOMNgvzddzkpvZ9GLyYNa8w2s7rqiTk5Q==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
   </head>
   <body>
     <div class="dashboard--ct">
@@ -92,7 +93,15 @@
               </div>
             </div>
           </div>
-          <div class="Acountstatistics cardshadow"></div>
+          <div class="Acountstatistics cardshadow">
+            <div class="trendingitemhd">
+              <p>Account Statistics</p>
+              <p>trending: Ferrari</p>
+            </div>
+            <div class="canvas-ct">
+              <canvas id="moneyGraph"></canvas>
+            </div>
+          </div>
         </div>
         <div class="Usersother">
           <div class="Products_users Accountbalance-ct cardshadow">

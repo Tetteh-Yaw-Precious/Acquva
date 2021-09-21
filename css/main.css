@@ -765,6 +765,24 @@ svg {
 }
 .dashboard--ct .Dashboardcontent .Acountstatistics {
   width: 60%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.dashboard--ct .Dashboardcontent .Acountstatistics .trendingitemhd {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+.dashboard--ct .Dashboardcontent .Acountstatistics .trendingitemhd p:nth-child(1) {
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+.dashboard--ct .Dashboardcontent .Acountstatistics .canvas-ct {
+  width: 90%;
+  height: 80%;
 }
 .dashboard--ct .Dashboardcontent .bidleaderboard {
   width: 30%;

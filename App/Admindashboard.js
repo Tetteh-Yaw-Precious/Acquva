@@ -6,6 +6,29 @@ const productionyearend = document.getElementById("prodyrend-js");
 const imageupload = document.getElementById("imageupload-js");
 const Auctiontime = document.getElementById("Auctiontimeend");
 
+//building doughnut
+let moneyGraph = document.getElementById("moneyGraph").getContext("2d");
+console.log(moneyGraph)
+Chart.defaults.font.size = 12;
+Chart.defaults.font.family = "Raleway,sans-serif";
+Chart.defaults.cutOut = 49;
+let massPopChart = new Chart(moneyGraph, {
+  type: "bar",
+  data: {
+    labels: ["car", "upcoming","upcoming","upcoming"],
+    datasets: [
+      {
+        label: "Population",
+        data: [56, 05,01,01],
+        backgroundColor: ["#FD1C6D", "#FDA31C",""],
+        barThickness: 50,
+        fontFamily: "Raleway",
+      },
+    ],
+  },
+  options: [],
+});
+
 auth.onAuthStateChanged((user) => {
   let data;
   db.collection("GlobalData")
@@ -52,7 +75,7 @@ auth.onAuthStateChanged((user) => {
             console.log("posted");
           });
       });
-      additemform.reset()
+    additemform.reset();
   });
 });
 
