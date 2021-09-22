@@ -1,62 +1,21 @@
-@use '../abstracts/variables.scss' as *;
-@use '../base/typography.scss' as *;
-@use '../abstracts/functions.scss' as *;
-@use '../abstracts/mixins.scss' as *;
+@use "../abstracts/variables.scss" as *;
+@use "../base/typography.scss" as *;
+@use "../abstracts/functions.scss" as *;
+@use "../abstracts/mixins.scss" as *;
 
-.cardItem {
-  height: 30%;
-  display: grid;
-  grid-template-columns: 30% 70%;
-  grid-template-rows: 50% 50%;
-  grid-template-areas:
-    "one two"
-    "one three";
+.card {
+  height: 20rem;
+  width: 22rem;
   .image {
-    grid-area: one;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    img {
-      width: 40%;
-    }
+    height: 15rem;
+    width: 21rem;
+    background-image: url("/assets/ferrari.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
-  .currentamount {
-    grid-area: two;
-    border-bottom: rem(3) solid $border;
-    display: flex;
-    justify-content: flex-start;
-    align-items: flex-end;
-    padding-left: 4%;
-    h1 {
-      font-family: $secondaryFont;
-      font-weight: 1000;
-      font-size: rem(24);
-      color: $primaryColor;
-    }
+  .text-dets{
+    padding: 0 1rem;
+    padding: 1rem 0rem;
   }
-  .tbp {
-    color: $primary-orange;
-  }
-  .textitem {
-    grid-area: three;
-    padding-left: 4%;
-    padding-top: 2%;
-    p {
-      font-family: $primaryFont;
-      color: $p-color;
-      span {
-        color: $primary-orange;
-      }
-    }
-  }
-}
-
-.darkyellow {
-  color: $yellowDark !important;
-}
-.darkviolet{
-    color: $darkviolet !important;
-}
-.yellow{
-    color: $primary-orange !important;
 }

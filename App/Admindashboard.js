@@ -5,6 +5,7 @@ const productionyearbegin = document.getElementById("prodyrbegin-js");
 const productionyearend = document.getElementById("prodyrend-js");
 const imageupload = document.getElementById("imageupload-js");
 const Auctiontime = document.getElementById("Auctiontimeend");
+const biddeditems = document.getElementById("biddeditems-js");
 
 //building doughnut
 let moneyGraph = document.getElementById("moneyGraph").getContext("2d");
