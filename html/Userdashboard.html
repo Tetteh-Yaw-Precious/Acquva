@@ -131,19 +131,20 @@
   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
   <script src="/App/index.js"></script>
   <script src="/config/firebase.js"></script>
-  <script src="/App/Admindashboard.js"></script>
-  <script src="/App/index.js"></script>
   <script>
     //real time date
     const date = new Date();
     //insert the date
     document.getElementById("date").innerHTML = date.toDateString();
-
+    let array = []
     //get firestore documents
     db.collection("Auctions").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         const data = doc.data();
-        console.log(doc.id, " => ", doc.data());
+        // console.log(doc.id, " => ", doc.data());
+
+        array.push(data)
+        console.log(array)
       });
     });
 
