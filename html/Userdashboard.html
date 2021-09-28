@@ -139,16 +139,25 @@
     //insert the date
     document.getElementById("date").innerHTML = date.toDateString();
     let array = []
-    //get firestore documents
-    db.collection("Auctions").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
-        // console.log(doc.id, " => ", doc.data());
+    // //get firestore documents
+    // db.collection("Auctions").get().then((querySnapshot) => {
+    //   querySnapshot.forEach((doc) => {
+    //     const data = doc.data();
+    //     // console.log(doc.id, " => ", doc.data());
 
-        array.push(data)
-        console.log(array)
-      });
-    });
+    //     array.push(data)
+    //   });
+    //   console.log(array)
+    // });
+
+
+  db.collection("Auctions").onSnapshot((posteditem)=>{
+    posteditem.forEach(doc=>{
+      const data = doc.data();
+      array.push(data)
+    })
+    console.log(array)
+  })
 
     const bidinputform = document.getElementById("bidinputform");
     const makepayments = document.getElementById("makepayments");

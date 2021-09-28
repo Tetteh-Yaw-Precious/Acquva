@@ -9,19 +9,19 @@ const biddeditems = document.getElementById("biddeditems-js");
 
 //building doughnut
 let moneyGraph = document.getElementById("moneyGraph").getContext("2d");
-console.log(moneyGraph)
+console.log(moneyGraph);
 Chart.defaults.font.size = 12;
 Chart.defaults.font.family = "Raleway,sans-serif";
 Chart.defaults.cutOut = 49;
 let massPopChart = new Chart(moneyGraph, {
   type: "bar",
   data: {
-    labels: ["car", "upcoming","upcoming","upcoming"],
+    labels: ["car", "upcoming", "upcoming", "upcoming"],
     datasets: [
       {
         label: "Population",
-        data: [56, 05,01,01],
-        backgroundColor: ["#FD1C6D", "#FDA31C",""],
+        data: [56, 05, 01, 01],
+        backgroundColor: ["#FD1C6D", "#FDA31C", ""],
         barThickness: 50,
         fontFamily: "Raleway",
       },
@@ -47,6 +47,26 @@ auth.onAuthStateChanged((user) => {
   console.log(additemform);
   additemform.addEventListener("submit", (e) => {
     e.preventDefault();
+    let itemDetails = {
+      Itemname: itemname.value.trim(),
+      Itemworth: itemworth.value,
+      Iteminfo: iteminfo.value,
+      productionyearbegin: productionyearbegin.value,
+      productionyearend: productionyearend.value,
+      auctiontime: firebase.firestore.Timestamp.fromDate(
+        new Date(Auctiontime.value)
+      ),
+      imageURL: "null",
+    };
+    console.log(itemDetails);
+
+    db.collection("Auctions")
+      .doc(itemname.value.trim())
+      .set(itemDetails)
+      .then(() => {
+        console.log("posted");
+      });
+
     const file = imageupload.files[0];
     const name = itemname.value.trim();
     const metadata = {
@@ -57,24 +77,9 @@ auth.onAuthStateChanged((user) => {
       .then((snapshot) => snapshot.ref.getDownloadURL())
       .then((url) => {
         console.log(url);
-        let itemDetails = {
-          Itemname: itemname.value,
-          Itemworth: itemworth.value,
-          Iteminfo: iteminfo.value,
-          productionyearbegin: productionyearbegin.value,
-          productionyearend: productionyearend.value,
-          auctiontime: firebase.firestore.Timestamp.fromDate(
-            new Date(Auctiontime.value)
-          ),
+        db.collection("Auctions").doc(name.trim()).update({
           imageURL: url,
-        };
-
-        db.collection("Auctions")
-          .doc(itemname.value)
-          .set(itemDetails)
-          .then(() => {
-            console.log("posted");
-          });
+        });
       });
     additemform.reset();
   });
