@@ -343,7 +343,6 @@ svg {
 .card .image {
   height: 15rem;
   width: 21rem;
-  background-image: url("/assets/ferrari.svg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -351,6 +350,7 @@ svg {
 .card .text-dets {
   padding: 0 1rem;
   padding: 1rem 0rem;
+  height: 5rem;
 }
 
 .form-container {

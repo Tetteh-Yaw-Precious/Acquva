@@ -46,25 +46,7 @@
         <a href="/html/collectedbids.html" class="navLinkitem" id="additem-js">Collect Items</a>
       </div>
     </div>
-    <div class="Dashboardcontent">
-      <div class="card cardshadow">
-        <div class="image cardshadow">
-        </div>
-        <div class="text-dets">
-          <p> <span>Item name:</span> 1957 Ferrari 250 Testa Rossa  </p>
-          <p>Worth: 1957 Ferrari 250 Testa Rossa </p>
-        </div>
-      </div>
-      <div class="card cardshadow">
-        <div class="image cardshadow">
-        </div>
-        <div class="text-dets">
-          <p> <span>Item name:</span> 1957 Ferrari 250 Testa Rossa  </p>
-          <p>Worth: 1957 Ferrari 250 Testa Rossa </p>
-        </div>
-      </div>
-     </div>
-
+    <div class="Dashboardcontent" id="openBids-js">
   <!-- <div class="biddeditems">j
   </div> -->
   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
@@ -73,72 +55,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-storage.js"></script>
   <script src="/App/index.js"></script>
   <script src="/config/firebase.js"></script>
-  <script>
-    //real time date
-    const date = new Date();
-    //insert the date
-    document.getElementById("date").innerHTML = date.toDateString();
-    let array = []
-    //get firestore documents
-    db.collection("Auctions").get().then((querySnapshot) => {
-      querySnapshot.forEach((doc) => {
-        const data = doc.data();
-        // console.log(doc.id, " => ", doc.data());
+  <script src="/App/Openbids.js"></script>
 
-        array.push(data)
-        // for(let i; i < array.length; i++){
-        //   console.log(i)
-        // }
-
-
-// traditional for loop
-for(let i=0; i<=array.length; i++) {
-  console.log(array[i])  // 1 2 3 4 5 6
-  let item =`<div class="card cardshadow" style=background-image:url()>
-        <div class="image cardshadow">
-        </div>
-        <div class="text-dets">
-          <p> <span>Item name:</span> ${array[i].Iteminfo}  </p>
-          <p>Worth: 1957 Ferrari 250 Testa Rossa </p>
-        </div>
-      </div>`
-      console.log(item)
-    } 
-      });
-    });
-
-    // const bidinputform = document.getElementById("bidinputform");
-    // const makepayments = document.getElementById("makepayments");
-    // const auctionmoney = document.getElementById("auctionmoney-js");
-
-    // console.log(bidinputform)
-    // const pkey = "FLWPUBK_TEST-feb2b069c8708a0cc88217c76f3f5179-X";
-    // const makepayment = (e) => {
-    //   e.preventDefault()
-    //   FlutterwaveCheckout({
-    //     public_key: pkey,
-    //     tx_ref: `asasd3232`,
-    //     amount: auctionmoney.value,
-    //     currency: "GHS",
-    //     country: "GH",
-    //     payment_options: "card,mobile_money_ghana",
-    //     customer: {
-    //       email: "user@gmail.com",
-    //       phone_number: `none`,
-    //       name: `username`,
-    //     },
-    //     callback: function (data) {
-    //     },
-    //     onclose: function () {
-    //     },
-    //     customizations: {
-    //       title: "Auction money",
-    //       description: "Auction money",
-    //     },
-    //   });
-    // }
-    // // bidinputform.addEventListener("submit", makepayment)
-  </script>
 </body>
 
 </html>
