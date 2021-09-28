@@ -336,23 +336,6 @@ svg {
   height: 90%;
 }
 
-.card {
-  height: 20rem;
-  width: 22rem;
-}
-.card .image {
-  height: 15rem;
-  width: 21rem;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-.card .text-dets {
-  padding: 0 1rem;
-  padding: 1rem 0rem;
-  height: 5rem;
-}
-
 .form-container {
   width: 100%;
   height: 100vh;
@@ -521,6 +504,81 @@ svg {
 }
 .additempopup .additemct .additemform .frmbtns input[type=file] {
   background: none;
+}
+
+.card {
+  height: 20rem;
+  width: 22rem;
+}
+.card .image {
+  height: 15rem;
+  width: 21rem;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.card .text-dets {
+  padding: 0 1rem;
+  padding: 1rem 0rem;
+  height: 5rem;
+}
+
+.cardItem {
+  height: 30%;
+  display: grid;
+  grid-template-columns: 30% 70%;
+  grid-template-rows: 50% 50%;
+  grid-template-areas: "one two" "one three";
+}
+.cardItem .image {
+  grid-area: one;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardItem .image img {
+  width: 40%;
+}
+.cardItem .currentamount {
+  grid-area: two;
+  border-bottom: 0.1875rem solid #f1f1f1;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+  padding-left: 4%;
+}
+.cardItem .currentamount h1 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 1000;
+  font-size: 1.5rem;
+  color: #fd1c41;
+}
+.cardItem .tbp {
+  color: #FDA31C;
+}
+.cardItem .textitem {
+  grid-area: three;
+  padding-left: 4%;
+  padding-top: 2%;
+}
+.cardItem .textitem p {
+  font-family: "Raleway", sans-serif;
+  color: #5a5959;
+}
+.cardItem .textitem p span {
+  color: #FDA31C;
+}
+
+.darkyellow {
+  color: #644F2F !important;
+}
+
+.darkviolet {
+  color: #470652 !important;
+}
+
+.yellow {
+  color: #FDA31C !important;
 }
 
 .homepagect {
